@@ -7,9 +7,10 @@
   ansible.builtin.import_tasks:
     file: app_prereq.yml
 
-
 - name: downloading Maven dependencies
   ansible.builtin.shell: mvn clean package ; mv target/{{component}}-1.0.jar {{component}}.jar
+  args:
+    chdir: /app
 
 - name: Import task schema_setup
   ansible.builtin.import_tasks:

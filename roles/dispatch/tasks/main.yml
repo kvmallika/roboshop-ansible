@@ -3,7 +3,6 @@
     name: golang
     status: installed
 
-
 - name: Import app prerequisites
   ansible.builtin.import_role:
     name: common

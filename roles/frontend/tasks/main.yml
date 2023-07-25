@@ -33,7 +33,7 @@
   ansible.builtin.systemd:
     state: restarted
     name: nginx
-    enabled: true
+    enabled: yes
 
 - name: Import Filebeat
   ansible.builtin.import_role:

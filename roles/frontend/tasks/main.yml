@@ -8,10 +8,10 @@
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
-##- name: Copy the Nginx config. file
- ## ansible.builtin.template:
- ##   src: nginx.conf
-  ##  dest: /etc/nginx/nginx.conf
+- name: Copy the Nginx config. file
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
 
 - name: Recursively remove directory
   ansible.builtin.file:

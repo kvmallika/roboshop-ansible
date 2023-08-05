@@ -17,4 +17,5 @@
 
 # delay : 10 don't start checking for 10 sec
 # one more wat to check the status of the port
-# ansible.builtin.shell: netstat -lntp ; grep 9090
+# we can write the above using shell as below
+# ansible.builtin.shell: sleep 10 ; netstat -lntp | grep 9090

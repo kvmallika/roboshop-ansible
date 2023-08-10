@@ -26,7 +26,7 @@ groups:
           summary: Server is down
 
       {% for component in components -%}
-      - alert: ServiceDown
+      - alert: ServiceDown-{{component.name}}
         expr: node_systemd_unit_state{state="active",exported_name="{{component.service_name}}.service", component="{{component.name}}"} < 1
         for: 1m
         labels:

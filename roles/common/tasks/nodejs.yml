@@ -5,7 +5,6 @@
 - name: Install NodeJS
   ansible.builtin.yum:
     name: nodejs
-    state: None
 
 - name: Import task app prerequisites
   ansible.builtin.import_tasks:
